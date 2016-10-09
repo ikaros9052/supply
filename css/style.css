@@ -15,19 +15,19 @@ input,button{font-family:"microsoft yahei";outline: none;cursor: pointer;}
 .fa-angle-left{font-size:0.75rem!important}
 /*nav-search*/
 .nav-search h1{width:1.4rem;height:1.4rem;text-indent:-9999em;background:url(../images/logo.png) no-repeat;background-size:100% 100%;}
-.nav-search input{width:10rem;height:1.4rem;border-radius: 0.9rem;border:0.05rem solid #dfdfdf;font-size: 0.5rem;padding: 0 0.875rem;margin-left:1rem;}
+.nav-search input{width:10.6rem;height:1.4rem;border-radius: 0.9rem;border:0.05rem solid #dfdfdf;font-size: 0.5rem;padding: 0 0.875rem;margin-left:1rem;}
 .nav-search{padding: 0.4rem 0;}
-.nav-search a{width: 3rem;height: 1.4rem;line-height:1.38rem;border-radius: 1rem;background-color: #fe6a2e;border: 0.05rem solid #e56b43;position: absolute;right:0;text-align: center;font-size: 0.375rem;color: #fff;}
+.nav-search a{width: 2.5rem;height: 1.4rem;line-height: 1.38rem;border-radius: 1rem;position: absolute;right: 0;text-align: center;font-size: 0.5rem;color: #999;margin-right: 10px;margin-top: 2px;}
 /*paging-nav*/
-.index-main{border-top: 10px solid #f4f4f4;}
-.paging{font-size: 0.7rem;font-weight:normal;color: #fe6a2e;padding: 0.2rem 0.6rem;margin-bottom: 0.5rem;border-left: 5px solid #fe6a2e;height: 1rem;line-height:1rem;}
+.index-main{border-top: 10px solid #f4f4f4;display: block;}
+.paging{font-size: 0.7rem;font-weight:normal;color: #fe6a2e;padding: 0.2rem 0.6rem;margin-bottom: 0.5rem;border-left: 5px solid #fe6a2e;height: 1rem;line-height:1rem;margin-top: 0.25rem;}
 .paging .fr{font-size: 1.25rem;height: 1rem;line-height: 1rem;margin-right: 0.25rem;color:#FE6A2E;}
 .shu-cai dl{font-size: 0.6rem;width: 46%;margin: 0rem 0.3rem 0.7rem;}
 .shu-cai dl dt img{width:100%;}
 .shu-cai dl dd a{color: #fe6a2e;margin-right: 0.25rem;font-size: 0.6rem;}
 .shu-cai dl dd{height: 0.75rem;line-height: 0.75rem;margin-top: 0.125rem;font-size: 0.6rem;}
 /*bottom*/
-.foot{padding-top:0.75rem;margin-bottom: 2rem;}
+.foot{padding-top:0.75rem;margin-bottom:1.3rem;}
 .foot a{height: 1.5rem;background-color: #ff6533;display: block;}
 .foot a span{font-size: 0.6rem;color: #fff;line-height: 1.5rem;font-weight: bold;padding-right: 0.5rem;}
 .foot .bottom{text-align: center;font-size: 0.6rem;line-height: 1.0rem;background-color: #f4f4f4;height: 3.625rem;padding-top: 0.5rem;}
@@ -46,16 +46,14 @@ input,button{font-family:"microsoft yahei";outline: none;cursor: pointer;}
 #particulars a{width: 1.6rem;height: 1.6rem; display: inline-block; color: #fff;}
 #particulars .retreat{margin-top: 0.35rem; margin-left: 0.35rem;}
 #particulars .suspension_right{margin-top: 0.35rem; margin-right: 0.35rem;}
-#particulars .price{padding-top: 0.925rem; padding-left: 0.65rem; padding-bottom: 0.7rem; border-bottom: 0.05rem solid #e3e3e3;}
+#particulars .price{padding-top: 0.925rem; padding-left: 0.65rem; padding-bottom: 0.7rem; border-bottom:0.375rem solid #e3e3e3;}
 #particulars .later{color: #e8574a; font-size: 0.625rem; padding-bottom: 0.25rem;}
 #particulars .original{ font-size: 0.5rem}
 #particulars .original_number{font-size: 0.4rem; text-decoration: line-through;}
-#particulars .particulars_nav{border-bottom: 0.05rem solid #ededed; margin-bottom: 0.45rem;}
+#particulars .particulars_nav{border-bottom: 0.05rem solid #ededed;}
 #particulars .particulars_nav li{width: 8.0rem; height: 2.2rem; float: left; display: inline-block; line-height: 2.2rem; text-align: center; font-size: 0.625rem;}
 #particulars .particulars_nav li a{color: #666; width: 100%;}
-#particulars .particulars_nav .particulars_active{color: #ff553c; height: 2.150rem; border-bottom: 0.05rem solid #f85731; border-radius: 0;}
-#particulars .particulars_nav .particulars_active a{color: #ff553c; }
-
+#particulars .particulars_nav .particulars_active{ border-radius: 0; padding: 0.5rem; font-size: 0.75rem}
 #particulars .recommend{border-top: 0.05rem solid #e7e7e7; padding: 0.5rem;}
 #particulars .recommend h2{font-size: 0.625rem; color: #818181; font-weight: normal;}
 #particulars .commodity{margin-top: 0.625rem; white-space:nowrap; overflow: hidden; float: left;}
@@ -75,6 +73,12 @@ input,button{font-family:"microsoft yahei";outline: none;cursor: pointer;}
 #particulars .parameter dt,#particulars .parameter dd{float: left; width: 4.0rem;}
 #particulars .parameter{margin-bottom:1.7rem;}
 #particulars .formerly dd{text-decoration: line-through;}
+#particulars .characteristic{display: block;}
+#particulars .characteristic .tomoto{background: url(../images/tomatoq.jpg) no-repeat; background-size: cover; width: 13.9rem; height:13.9rem; display: block; margin: 0 auto; background-position: 50% 50%; margin-top: 0.25rem; margin-bottom: 0.25rem;}
+#particulars .characteristic .tomoto1{background: url(../images/shizi2.jpg) no-repeat; background-size: cover;background-position: 50% 50%;}
+#particulars .characteristic .tomoto2{background: url(../images/shizi3.jpg) no-repeat; background-size: cover;background-position: 50% 50%;}
+#particulars .characteristic span{display: block; padding: 0.5rem 0.75rem;}
+#particulars .particulars_message{color: #999; padding:0.5rem 0 0.5rem 1.0rem; border-top: 1px solid #e7e7e7;}
 /*details end*/
 .cart-head{background:#FF8039;padding:0.4rem 0.75rem;}
 .cart-head a,.cart-head span{float:left;color:#fff;font-weight:normal;}

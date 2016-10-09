@@ -30,12 +30,24 @@
 		<div class="original">市场价：<span class="original_number">￥28.00</span></div>
 	</div>
 	<div class="particulars_nav">
-		<ul class="clearfix">
-			<li class="particulars_active"><a href="javascript:">产品详情</a></li>
-			<li><a href="javascript:">产品参数</a></li>
-		</ul>
+		<div class="particulars_active">产品描述</div>
+		<div class="particulars_message">
+			<p>商品信息</p>
+			<p>品名：西红柿</p>
+			<p>别名：番茄/洋柿子</p>
+			<p>储存方式：阴凉干燥通风</p>
+		</div>
+	</div>
+	<div class="particulars_nav">
+		<div class="particulars_active">产品详情</div>
 	</div>
 	<div class="tab_box">
+		<div class="characteristic">
+			<span>商品特点</span>
+			<i class="tomoto"></i>
+			<i class="tomoto tomoto1"></i>
+			<i class="tomoto tomoto2"></i>
+		</div>
 		<div class="recommend clearfix">
 			<h2>推荐产品</h2>
 			<div class="commodity">
@@ -74,22 +86,5 @@
 		<a href="confirmorders.html" class="buy fr">立即购买</a>
 	</div>
 </div>
-	<script type="text/javascript" >
-	$(function(){
-	    var $div_li =$("div.particulars_nav ul li");
-	    $div_li.click(function(){
-			$(this).addClass("particulars_active")
-				   .siblings().removeClass("particulars_active");
-				   var index=$div_li.index(this);
-				   $("div.tab_box>div")
-				        .eq(index).show()
-				        .siblings().hide();
-		}).hover(function(){
-			$(this).addClass("hover")
-		},function(){
-			$(this).removeClass("hover");
-		})
-	})
-</script>
 </body>
 </html>

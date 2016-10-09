@@ -62,10 +62,12 @@
 	</div>
 	<script>
 		$(function(){
+			var $goods=$(".goods");
+			var $check=$goods.find(".check");
 			function totalPrice(){
-				var $goods= $(".goods");
+				var $selected=$(".selected").parent(".goods");
 				var total=0;
-				$goods.each(function() {
+				$selected.each(function() {
 					var num=$(this).attr("data-num");
 					var price=$(this).attr("data-price");
 					total+=num*price;
@@ -76,7 +78,6 @@
 				var i=parseInt($(this).next("input").val());
 				// alert(i);
 				$(this).next("input").val(i+1).end().parents(".goods").attr("data-num",i+1);
-				totalPrice();
 				// alert($(".goods").attr("data-num"));
 				
 			})
@@ -84,26 +85,23 @@
 				if($(this).parent().find("input").val()>0){
 					var i=$(this).parent().find("input").val();
 					$(this).parent().find("input").val(i-1).end().parents(".goods").attr("data-num",i-1);
-					totalPrice();
 				}
 			})
-			$(".goods .check").click(function(){
+			$check.click(function(){
 				if($(this).hasClass("selected")==true){
 					$(this).removeClass("selected");
 				}else{
 					$(this).addClass("selected");
 				}
+				totalPrice();
 			})
 			$(".select-all .check").click(function(){
-				if($(".goods .check,.select-all .check").hasClass("selected")==true){
-					$(".goods .check,.select-all .check").removeClass("selected");
-					totalPrice();
-					// alert($(".goods").attr("data-num"));
+				if($(".select-all .check").hasClass("selected")==true){
+					$(".select-all .check,.goods .check").removeClass("selected");
 				}else{
-					$(".goods .check,.select-all .check").addClass("selected");
-					totalPrice();
-					// alert($(".goods").attr("data-num"));
+					$(".select-all .check,.goods .check").addClass("selected");
 				}
+				totalPrice();
 			});
 			var screenHeight=$(window).height();
 			$("body").css("height",screenHeight);
