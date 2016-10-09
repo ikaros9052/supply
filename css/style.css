@@ -167,15 +167,17 @@ input,button{font-family:"microsoft yahei";outline: none;cursor: pointer;}
 .addres_frm .deta_addr{border-bottom:0;}
 .addres_frm .deta_addr input{padding-bottom:0.4rem;width:15.455rem;border:0;outline:none;color:#767676;padding-left:0.47rem;font-size:0.5rem;}
 /*user end*/
-.samll-wrap{width:14rem;margin:0 auto;} 
-.fruit{border-bottom: 1px solid #E4E4E4;padding:0.45rem 0;} 
+.samll-wrap{width:14rem;margin:0 auto;border-bottom: 1px solid #E4E4E4;padding:0.45rem 0;} 
 .samll-wrap img{width: 5rem;height: 3.2rem;margin-right: 0.35rem;} 
 .samll-wrap dt{float: left;}
 .samll-wrap .bo{margin-bottom: 0.5rem;}
-.samll-wrap dd{margin-top:0.2rem;}
+.samll-wrap dd{margin-top:0.1rem;}
 .samll-wrap dd span{text-decoration: line-through;}
-.kind h1{font-size: 0.65rem;border-bottom: 0.05rem solid #ccc;padding-bottom: 0.3rem;padding-left: 0.3rem;}
+.kind h1{font-size: 0.65rem;border-bottom: 0.05rem solid #ccc;padding-bottom: 0.3rem;padding-left: 0.45rem;margin-top: 0.5rem;}
 .fruit .price{color: #F09836;}
+.list-search input{width:13.5rem;height:1.4rem;border-radius: 0.9rem;border:0.05rem solid #dfdfdf;font-size: 0.5rem;padding: 0 0.875rem;margin:0.325rem;position: relative;}
+.list-search i{position: absolute;top: 0.7rem;right:1rem;font-size: 0.7rem;color: #ccc;}
+.kind{margin-bottom:2rem;}
 /*list end*/
 .order-nav{background-color: #FE6A2E;padding:0.4rem 0;}
 .img-a{margin:0 0.875rem 0 0.7rem;color:#fff;height: 0.85rem;padding-top: 0.05rem;}
