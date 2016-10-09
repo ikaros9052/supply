@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/rem.js"></script>
+	<script src="js/jquery-3.0.0.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<div class="cart-head">
+		<h1 class="clearfix">
+			<a href="details.html" class="fa fa-angle-left"></a>
+			<span>购物车</span>
+		</h1>
+	</div>
+	<div class="cart-main">
+		<div class="goods clearfix" data-price="10" data-num="0">
+			<a class="check" href="javascript:"></a>
+			<img class="good-img fl" src="images/tudou.jpg" alt="">
+			<div class="goods-details">
+				<h2>月亮土豆</h2>
+				<div class="good-price clearfix">
+					<span class="fl">¥<i>10.00</i></span>
+					<div class="num fl">
+						<a class="add" href="javascript:">+</a>
+						<input type="text" value="0" disabled>
+						<a class="reduce" href="javascript:">-</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- goods end -->
+		<div class="goods clearfix" data-price="15" data-num="0">
+			<a class="check" href="javascript:"></a>
+			<img class="good-img fl" src="images/baicai.jpg" alt="">
+			<div class="goods-details">
+				<h2>火星大白菜</h2>
+				<div class="good-price clearfix">
+					<span class="fl" data-price="15">¥<i>15.00</i></span>
+					<div class="num fl">
+						<a class="add" href="javascript:">+</a>
+						<input type="text" value="0" disabled />
+						<a class="reduce" href="javascript:">-</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- goods end -->
+	</div>
+	<!-- cart end -->
+	<div class="cart-foot clearfix">
+		<div class="total fl clearfix">
+			<div class="select-all fl"><a class="check" href="javascript:"></a><span>全选</span></div>
+			<p class="total-price fr">合计：0</p>
+		</div>
+		<!-- total end -->
+		<a class="confirm fr" href="confirmorders.html">确认订单</a>
+		<!-- confirm end -->
+	</div>
+	<script>
+		$(function(){
+			function totalPrice(){
+				var $goods= $(".goods");
+				var total=0;
+				$goods.each(function() {
+					var num=$(this).attr("data-num");
+					var price=$(this).attr("data-price");
+					total+=num*price;
+					$(".total-price").text("合计："+total);
+				})
+			}
+			$(".add").click(function(){
+				var i=parseInt($(this).next("input").val());
+				// alert(i);
+				$(this).next("input").val(i+1).end().parents(".goods").attr("data-num",i+1);
+				totalPrice();
+				// alert($(".goods").attr("data-num"));
+				
+			})
+			$(".reduce").click(function(){
+				if($(this).parent().find("input").val()>0){
+					var i=$(this).parent().find("input").val();
+					$(this).parent().find("input").val(i-1).end().parents(".goods").attr("data-num",i-1);
+					totalPrice();
+				}
+			})
+			$(".goods .check").click(function(){
+				if($(this).hasClass("selected")==true){
+					$(this).removeClass("selected");
+				}else{
+					$(this).addClass("selected");
+				}
+			})
+			$(".select-all .check").click(function(){
+				if($(".goods .check,.select-all .check").hasClass("selected")==true){
+					$(".goods .check,.select-all .check").removeClass("selected");
+					totalPrice();
+					// alert($(".goods").attr("data-num"));
+				}else{
+					$(".goods .check,.select-all .check").addClass("selected");
+					totalPrice();
+					// alert($(".goods").attr("data-num"));
+				}
+			});
+			var screenHeight=$(window).height();
+			$("body").css("height",screenHeight);
+			$(".cart-foot").css({"position":"absolute","bottom":"0"});
+		})
+	</script>
+</body>
+</html>
