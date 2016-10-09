@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="js/rem.js"></script>
+		<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 	</head>
 	<body>
 		<div class="nav-search wrap clearfix rel">
@@ -15,6 +16,49 @@
 			<a href="javascript:" class="fr"><i style="margin-right:0.1rem" class="fa fa-search"></i>搜索</a>
 		</div>
 		<!-- top  sosuo -->
+		<div class="nav">
+			<ul class="bot-nav">
+				<li>
+					<div class="bot-items">
+						<a href="index.html">
+							<i class="fa fa-home"></i>
+							<span>首页</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div id="spfl" class="bot-items rel">
+						<a href="javascript:">
+							<i class="fa fa-bars"></i>
+							<span>商品分类</span>
+						</a>
+						<div class="spfl">
+							<ul>
+								<li><a href="list.html">叶菜类</a></li>
+								<li><a class="noborder" href="list2.html">根茎类</a></li>
+							</ul>
+							<i class="fa fa-caret-down"></i>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="bot-items">
+						<a href="cart.html">
+							<i class="fa fa-shopping-cart"></i>
+							<span>购物车</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="bot-items">
+						<a href="user.html">
+							<i class="fa fa-user"></i>
+							<span>个人中心</span>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
 		<div class="index-main">
 			<a href="javascript:">
 				<h2 class="paging clearfix">
@@ -135,39 +179,15 @@
 			</div>
 		</div>
 		<!-- foot -->
-		<ul class="bot-nav">
-			<li>
-				<div class="bot-items">
-					<a href="index.html">
-						<i class="fa fa-home"></i>
-						<span>首页</span>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="bot-items">
-					<a href="javascript:">
-						<i class="fa fa-bars"></i>
-						<span>商品分类</span>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="bot-items">
-					<a href="cart.html">
-						<i class="fa fa-shopping-cart"></i>
-						<span>购物车</span>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div class="bot-items">
-					<a href="user.html">
-						<i class="fa fa-user"></i>
-						<span>个人中心</span>
-					</a>
-				</div>
-			</li>
-		</ul>
+		<script>
+			$(".spfl").hide();	
+			$("#spfl").click(function(){
+				if($(".spfl").is(":visible")==true){
+					$(".spfl").slideUp("slow");
+				}else{
+					$(".spfl").slideDown("slow");
+				}
+			})
+		</script>
 	</body>
 </html>
