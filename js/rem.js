@@ -7,8 +7,10 @@ $(function(){
 	$("#spfl").click(function(){
 		if($(".spfl").is(":visible")==true){
 			$(".spfl").slideUp("slow");
+			// $(".spfl").hide();
 		}else{
 			$(".spfl").slideDown("slow");
+			// $(".spfl").show();
 		}
 	})
 })
