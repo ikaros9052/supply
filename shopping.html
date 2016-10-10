@@ -7,9 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery-1.8.2.min.js"></script>	
 	<script src="js/rem.js"></script>
-	<script>alert(2);</script>
+	<script>alert(1);</script>
 	<script>
-		alert(2);
 		$(function(){
 			var hei=$(window).height();
 			$(".content").css({"minHeight":hei});
@@ -17,7 +16,8 @@
 				$(this).toggleClass("checked");
 				totalPrice();
 			})
-			function totalPrice(){
+			alert(2);
+			/*function totalPrice(){
 				var tprice=0;
 				$('.content dl.commodity .checked').each(function(){
 					var _this = $(this);
@@ -52,7 +52,7 @@
 			totalPrice();
 			$(".commodity_num a").click(function(){
 				totalPrice();
-			})
+			})*/
 		})
 	</script>
 </head>
