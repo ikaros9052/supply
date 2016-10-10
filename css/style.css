@@ -85,32 +85,34 @@ input,button{font-family:"microsoft yahei";outline: none;cursor: pointer;}
 #particulars .characteristic span{display: block; padding: 0.5rem 0.75rem;}
 #particulars .particulars_message{color: #999; padding:0.5rem 0 0.5rem 1.0rem; border-top: 1px solid #e7e7e7;}
 /*details end*/
-.cart-head{background:#FF8039;padding:0.4rem 0.75rem;}
-.cart-head a,.cart-head span{float:left;color:#fff;font-weight:normal;}
-.cart-head a{width:0.7rem;height:1.1347rem;line-height:1.1347rem;margin-right:0.7rem;font-size:1.25rem;}
-.cart-head span{padding:0.2rem 0;padding-left:0.5rem;border-left:2px solid #fff;line-height:1;font-size:0.75rem;}
-/*head end*/
-.goods{position:relative;margin:0.5rem 0;padding:0.5rem;background:#fff;}
-.check{position:absolute;top:50%;margin-top:-0.375rem;width:0.75rem;height:0.75rem;border:0.05rem solid #ccc;border-radius: 50%;}
-.selected{border:0.05rem solid #F17436;background:url(../images/checkmark.gif) no-repeat center;background-size:75%;}
-.good-img{width:3.75rem;height:3.75rem;margin-left:2.25rem;margin-right:0.5rem;}
-.goods-details h2{padding:0.4rem 0;font-weight:normal;color:#000;}
-.good-price{margin-top:0.5rem;}
-.good-price i{font-style: normal;}
-.good-price span{color:#666;font-size:0.75rem;margin-right:0.75rem;}
-.num a,.num input{float:left;font-size:0.6rem;border:0.05rem solid #999;height:1rem;line-height:1rem;text-align:center;}
-.num input{width:1rem;margin:0 -0.05rem;background:#fff;cursor:default;}
-.num a{width:1rem;}
-.add{border-radius:5px 0 0 5px;}
-.reduce{border-radius:0 5px 5px 0;}
-.cart-foot{width:100%;background: #fff;}
-.total{width:75%;padding:0.625rem 0;position:relative;}
-.select-all span{padding-left:1.5rem;}
-.select-all .check{left:0.5rem;margin-top: -0.43rem;}
-.total p{margin:0 0.75rem;}
-.total-price{width:2.5rem;}
-.confirm{width:25%;background:#ff8039;border:0;padding:0.625rem 0;font-size:0.625rem;color:#fff;text-align:center;}
-/*shopping-cart end*/
+#shopcar .title{margin:0 0.375rem;padding:0.5rem;font-size:0.7rem;border-bottom:1px  solid #F1F1F1;}
+#shopcar .title h3{font-size:0.7rem;font-weight:400;}
+#shopcar .redact{float: right;color:#2C9BD5;}
+#shopcar .content{background-color: #EFEFF5;}
+#shopcar .commodity{padding: 0.5rem 0.375rem;overflow: hidden;background-color: #fff;border-bottom: 1px solid #DFDFE2;box-shadow: 0 0.05rem 0.05rem #DFDFE2;}
+#shopcar .commodity dt{float: left;margin-right:1.0rem;position: relative;font-size:0;}
+#shopcar .commodity_img{width:5.0rem;height:5.0rem;margin-left:2.0rem;border-radius:0.05rem;}
+#shopcar .check{position: absolute;left:0.25rem;top:50%;width:0.625rem;height:0.625rem;border:0.05rem solid #F2F2F2;border-radius:50%;transform:translateY(-0.3125rem);}
+#shopcar .checked{background: url(../images/checkmark.gif) no-repeat center;background-size:75%;border-color:#FF8847!important;}
+#shopcar .commodity_name{padding-right:0.5rem;font-size:0.7rem;line-height: 1.2;}
+#shopcar .commodity_type{padding:0.25rem 0;font-size:0.7rem;color:#999;letter-spacing: 0.1rem;}
+#shopcar .commodity_price{margin-top:0.5rem;}
+#shopcar .commodity_price span{display:inline-block;width:3.375rem;font-size:0.625rem;}
+#shopcar .commodity_num{display: inline-block;vertical-align:-0.25rem;font-size:0;}
+#shopcar .commodity_num *{height:1.0rem;margin-left:-1px;padding:0;line-height:1.0rem;border:1px solid #000;vertical-align: bottom;text-align: center;color:#000;}
+#shopcar .commodity_num a{display:inline-block;width:1.0rem;font-size:0.7rem;}
+#shopcar .commodity_num a:nth-child(1){border-radius:0.1rem 0 0 0.1rem;}
+#shopcar .commodity_num a:nth-child(3){border-radius:0 0.1rem 0.1rem 0;}
+#shopcar .commodity_num input{width:1.35rem;font-size: 0.5rem;background-color: #fff;}
+#shopcar .pay{position:fixed;bottom:0;width: 100%;font-size:0;z-index:4;}
+#shopcar .pay-info,#shopcar .pay-submit{display: inline-block;height:2.5rem;box-sizing:border-box;vertical-align: bottom;}
+#shopcar .pay-info{width: 75%;padding:0.375rem 0.5rem;background-color:#F8F8F8;position: relative;font-size:0.7rem;text-align: right;}
+#shopcar .pay-info span{margin-left:0.25rem;color:#FF803A;}
+#shopcar .pay-submit{width: 25%;line-height:2.5rem;border:0;background-color: #FF803A;color:#fff;font-size:0.7rem;letter-spacing: 0.1rem;outline:none;cursor:pointer;text-align: center;}
+#shopcar .command{position:absolute;top:50%;left:0.5rem;transform:translateY(-50%);color:#000;}
+#shopcar .command i{display:inline-block;width:0.625rem;height:0.625rem;margin-right:0.1rem;border:0.05rem solid #F2F2F2;border-radius:50%;vertical-align:-0.1rem;}
+.pay-info .heji{margin-top:0.3rem;}
+/*shopcar end*/
 .affirm_body{ background-color: #EBEFF2;}
 .affirm_add{display: block; height: 2.225rem; font-size: 0.6rem;border-bottom: 0.05rem solid #DADBDD;line-height: 2.225rem;text-align: center; background-color: #fff; color: #373737;}
 .affirm_add_img{ width: 0.4rem; height: 0.4rem;}

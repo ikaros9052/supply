@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no" >
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/rem.js"></script>
+	<script src="js/jquery-3.0.0.min.js"></script>	
+</head>
+<body>
+	<div id="shopcar">
+		<div class="title clearfix">
+			<h3 class="fl">菜篮子</h3>
+			<a href="javascript: " class="redact">编辑</a>
+		</div>
+		<div class="content">
+			<dl class="commodity">
+				<dt>
+					<a href="javascript:" class="check checked"></a>
+					<img src="images/baicai.jpg" class="commodity_img" />
+				</dt>
+				<dd>
+					<p class="commodity_name">大白菜大白菜大白菜大白菜大白菜</p>
+					<p class="commodity_type">分类:叶菜</p>
+					<div class="commodity_price">
+						<span class="price" data-type="6">￥6.00</span>
+						<div class="commodity_num">
+							<a href="javascript: " class="dn">-</a>
+							<input type="text" name="" value="100" class="number" disabled />
+							<a href="javascript: " class="up">+</a>
+						</div>
+					</div>
+				</dd>
+			</dl>
+			<dl class="commodity">
+				<dt>
+					<a href="javascript: " class="checked check"></a>
+					<img src="images/tudou.jpg" class="commodity_img" />
+				</dt>
+				<dd>
+					<p class="commodity_name">
+						小土豆小土豆小土豆小土豆
+					</p>
+					<p class="commodity_type">分类:根茎</p>
+					<div class="commodity_price">
+						<span class="price" data-type="10">￥10.00</span>
+						<div class="commodity_num">
+							<a href="javascript: " class="dn">-</a>
+							<input type="text" name="" value="1" class="number" disabled />
+							<a href="javascript: " class="up">+</a>
+						</div>
+					</div>
+				</dd>
+			</dl>
+		</div>
+		<div class="pay">
+			<div class="pay-info">
+				<a href="javascript: " class="command"><i class="checked"></i>全选</a>
+				<div class="heji">合计:<span class="total">￥1000.00</span></div>
+			</div>
+			<a href="confirmorders.html" class="pay-submit">确认订单</a>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			var hei=$(window).height();
+			$(".content").css({"minHeight":hei});
+			$(".check").click(function(){
+				$(this).toggleClass("checked");
+				totalPrice();
+			})
+			function totalPrice(){
+				var tprice=0;
+				$('.content dl.commodity .checked').each(function(){
+					var _this = $(this);
+					var $obj = _this.parents('.commodity');
+					var price = $obj.find('.price').attr('data-type');
+					var num = $obj.find('.number').val();
+					var oprice = price*num;
+					tprice+=oprice;
+				})
+				$('.pay .total').html(`￥`+tprice);
+			}
+			$(".dn").click(function(){
+				var val=$(this).siblings("input");
+				if(val.val()>1){
+					val.val(parseInt(val.val())-1)
+				}
+			})
+			$(".up").click(function(){
+				var val=$(this).siblings("input");
+				val.val(parseInt(val.val())+1);
+			})
+			$(".command").click(function(){
+				var colen=$(".commodity").length;
+				var chlen=$(".commodity .checked").length;
+				if(chlen<colen){
+					$(".command i,.check").addClass("checked");
+				}else{
+					$(".command i,.check").removeClass("checked");
+				}
+				totalPrice()
+			});
+			totalPrice();
+			$(".commodity_num a").click(function(){
+				totalPrice();
+			})
+		})
+	</script>
+</body>
+</html>
