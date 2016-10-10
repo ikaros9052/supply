@@ -35,9 +35,9 @@ input,button{font-family:"microsoft yahei";outline: none;cursor: pointer;}
 .bot-nav li{width: 25%;text-align: center;color: #fff;padding:0.25rem 0;float: left;}
 .bot-items i,.bot-items span{color:#fff;display:block;font-size:0.8rem;}
 .bot-items span{font-size:0.5rem;}
-.spfl{position:absolute;bottom:2.05rem;left:50%;margin-left:-1.25rem;}
+.spfl{position:absolute;bottom:2.05rem;left:50%;margin-left:-1.5rem;}
 .spfl ul{background:#FF5C41;}
-.spfl li{float:none;width:2.5rem;padding:0;}
+.spfl li{float:none;width:3rem;padding:0;}
 .spfl a{display:block;margin:0 0.2rem;border-bottom:1px solid #fff;padding:0.2rem 0;color:#fff;font-size:0.5rem;}
 .spfl .noborder{border:0;}
 .spfl i{position: absolute;color: #FF5C41;bottom: -0.4rem;width: 100%;}
