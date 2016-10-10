@@ -4,13 +4,18 @@ window.onload=window.onresize=function(){
 };
 $(function(){
 	$(".spfl").hide();
-	$("#spfl").click(function(){
-		if($(".spfl").is(":visible")){
-			$(".spfl").fadeOut("slow");
-			// $(".spfl").hide();
-		}else{
-			$(".spfl").fadeIn("slow");
-			// $(".spfl").show();
-		}
-	})
+	$("#spfl").on("click", function(e){
+		if($(".spfl").is(":hidden")){
+	    	$(".spfl").fadeIn("slow");
+	    }else{
+	    	$(".spfl").fadeOut("slow");
+	    }
+	    $(document).one("click", function(){
+	        $(".spfl").hide();
+	    });
+	    e.stopPropagation();
+	});
+	$(".spfl").on("click", function(e){
+	    e.stopPropagation();
+	});
 })
