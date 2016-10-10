@@ -16,7 +16,7 @@
 				$(this).toggleClass("checked");
 				totalPrice();
 			})
-			alert(2);
+			alert(3);
 			function totalPrice(){
 				var tprice=0;
 				$('.content dl.commodity .checked').each(function(){
@@ -29,7 +29,7 @@
 				})
 				$('.pay .total').html('￥'+tprice);
 			}
-			/*$(".dn").click(function(){
+			$(".dn").click(function(){
 				var val=$(this).siblings("input");
 				if(val.val()>1){
 					val.val(parseInt(val.val())-1)
@@ -52,7 +52,7 @@
 			totalPrice();
 			$(".commodity_num a").click(function(){
 				totalPrice();
-			})*/
+			})/**/
 		})
 	</script>
 </head>
