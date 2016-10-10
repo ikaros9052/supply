@@ -17,7 +17,7 @@
 				totalPrice();
 			})
 			alert(2);
-			/*function totalPrice(){
+			function totalPrice(){
 				var tprice=0;
 				$('.content dl.commodity .checked').each(function(){
 					var _this = $(this);
@@ -27,9 +27,9 @@
 					var oprice = price*num;
 					tprice+=oprice;
 				})
-				$('.pay .total').html(`￥`+tprice);
+				$('.pay .total').html('￥'+tprice);
 			}
-			$(".dn").click(function(){
+			/*$(".dn").click(function(){
 				var val=$(this).siblings("input");
 				if(val.val()>1){
 					val.val(parseInt(val.val())-1)
