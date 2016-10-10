@@ -5,11 +5,11 @@ window.onload=window.onresize=function(){
 $(function(){
 	$(".spfl").hide();
 	$("#spfl").click(function(){
-		if($(".spfl").is(":visible")==true){
-			$(".spfl").slideUp("slow");
+		if($(".spfl").is(":visible")){
+			$(".spfl").fadeOut("slow");
 			// $(".spfl").hide();
 		}else{
-			$(".spfl").slideDown("slow");
+			$(".spfl").fadeIn("slow");
 			// $(".spfl").show();
 		}
 	})
