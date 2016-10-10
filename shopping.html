@@ -7,7 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery-1.8.2.min.js"></script>	
 	<script src="js/rem.js"></script>
-	<script>alert(1);</script>
 	<script>
 		$(function(){
 			var hei=$(window).height();
@@ -16,7 +15,6 @@
 				$(this).toggleClass("checked");
 				totalPrice();
 			})
-			alert(3);
 			function totalPrice(){
 				var tprice=0;
 				$('.content dl.commodity .checked').each(function(){
@@ -49,6 +47,13 @@
 				}
 				totalPrice()
 			});
+
+			$(".check").click(function(){
+				if($(".commodity .checked").length==$(".commodity").length){
+					$(".command i").addClass("checked");
+				}
+			})
+
 			totalPrice();
 			$(".commodity_num a").click(function(){
 				totalPrice();
