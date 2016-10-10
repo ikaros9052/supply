@@ -9,7 +9,48 @@
 	<script src="js/rem.js"></script>
 	<script>
 		$(function(){
-			alert(1);
+			var hei=$(window).height();
+			$(".content").css({"minHeight":hei});
+			$(".check").click(function(){
+				$(this).toggleClass("checked");
+				totalPrice();
+			})
+			function totalPrice(){
+				var tprice=0;
+				$('.content dl.commodity .checked').each(function(){
+					var _this = $(this);
+					var $obj = _this.parents('.commodity');
+					var price = $obj.find('.price').attr('data-type');
+					var num = $obj.find('.number').val();
+					var oprice = price*num;
+					tprice+=oprice;
+				})
+				$('.pay .total').html(`￥`+tprice);
+			}
+			$(".dn").click(function(){
+				var val=$(this).siblings("input");
+				if(val.val()>1){
+					val.val(parseInt(val.val())-1)
+				}
+			})
+			$(".up").click(function(){
+				var val=$(this).siblings("input");
+				val.val(parseInt(val.val())+1);
+			})
+			$(".command").click(function(){
+				var colen=$(".commodity").length;
+				var chlen=$(".commodity .checked").length;
+				if(chlen<colen){
+					$(".command i,.check").addClass("checked");
+				}else{
+					$(".command i,.check").removeClass("checked");
+				}
+				totalPrice()
+			});
+			totalPrice();
+			$(".commodity_num a").click(function(){
+				totalPrice();
+			})
 		})
 	</script>
 </head>
@@ -67,52 +108,5 @@
 			<a href="confirmorders.html" class="pay-submit">确认订单</a>
 		</div>
 	</div>
-
-	<script>
-		$(function(){
-			var hei=$(window).height();
-			$(".content").css({"minHeight":hei});
-			$(".check").click(function(){
-				$(this).toggleClass("checked");
-				totalPrice();
-			})
-			function totalPrice(){
-				var tprice=0;
-				$('.content dl.commodity .checked').each(function(){
-					var _this = $(this);
-					var $obj = _this.parents('.commodity');
-					var price = $obj.find('.price').attr('data-type');
-					var num = $obj.find('.number').val();
-					var oprice = price*num;
-					tprice+=oprice;
-				})
-				$('.pay .total').html(`￥`+tprice);
-			}
-			$(".dn").click(function(){
-				var val=$(this).siblings("input");
-				if(val.val()>1){
-					val.val(parseInt(val.val())-1)
-				}
-			})
-			$(".up").click(function(){
-				var val=$(this).siblings("input");
-				val.val(parseInt(val.val())+1);
-			})
-			$(".command").click(function(){
-				var colen=$(".commodity").length;
-				var chlen=$(".commodity .checked").length;
-				if(chlen<colen){
-					$(".command i,.check").addClass("checked");
-				}else{
-					$(".command i,.check").removeClass("checked");
-				}
-				totalPrice()
-			});
-			totalPrice();
-			$(".commodity_num a").click(function(){
-				totalPrice();
-			})
-		})
-	</script>
 </body>
 </html>
