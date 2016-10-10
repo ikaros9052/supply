@@ -150,6 +150,7 @@ input,button{font-family:"microsoft yahei";outline: none;cursor: pointer;}
 .cnt_quer div p{font-size:0.45rem;padding-bottom:0.35rem;}
 /*cnt_quer end*/
 .cnt_infor{background:#fff;margin-top:0.675rem;}
+.cnt_infor em{margin-right:0.3rem;}
 .cnt_infor ul li{border-bottom:1px solid #EBEBEB;height:1.5rem;line-height:1.5rem;font-size:0.45rem;position:relative;}
 .cnt_infor a{color:#565656;position:absolute;left:0.575rem;right:0.575rem;bottom:0;top:0;}
 .cnt_infor i{line-height:1.5rem;float:right;}
